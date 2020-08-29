@@ -1,47 +1,32 @@
-# for i in range(1, 101):
-#     if i ** 0.5 % 1:
-#         state = 'on'
-#     else:
-#         state = 'off'
-#     print("Bulb {}:{}".format(i, state))
-
-# for i in range(1, 11):
-#     print("Bulb %s is on" % i ** 2)
 #
-# lightBulbs = [False] * 100
-# for i in range(100):
-#     for j in range(i, 10, i + 1):
-#         lightBulbs[j] = not lightBulbs[j]
-#     print("Bulb %d:" % (i + 1), 'open' if lightBulbs[i] else 'close')
-
-# bulbs = [0] * 100
-# for x in range(1, 101):
-#     for y in range(x - 1, 100, x):
-#         if bulbs[y] == 0:
-#             bulbs[y] = 1
-#         elif bulbs[y] == 1:
-#             bulbs[y] = 0
-# switchedOn = []
-# for i, value in enumerate(bulbs):
-#     if value == 1:
-#         switchedOn.append(i + 1)
-# print('these bulbs are on: ', switchedOn)
+# I don't know what happened to this problem.
+# It was on canvas for a small amount of time.
+# I did it, so here it is.
+#
+# def homework1() -> object:
+#     for i in range(-10, 12, 2):
+#         print("Num:", i, i ** 2)
+#
+#
+# if __name__ == "__main__":
+#     print('Hello CSCI 3412 !!')
+#     homework1()
 
 
 """
- @param n the number of iterations
+ @param x the number of iterations
  @param number_of_bulbs default argument
  @brief This functions iterates over a list of boolean light bulbs
  @param n number of times.
 """
 
 
-def light_bulb_problem(n, number_of_bulbs=100):
-    bulbs = [False] * number_of_bulbs  # initialize list with all elements false or off
-    for index in range(n):
+def light_bulb_problem(x, number_of_bulbs=100):
+    light_bulbs = [False] * number_of_bulbs  # initialize list with all elements false or off or zero
+    for index in range(x):
         for step in range(index, number_of_bulbs, index + 1):
-            bulbs[step] = not bulbs[step]
-    return bulbs
+            light_bulbs[step] = not light_bulbs[step]
+    return light_bulbs
 
 
 if __name__ == "__main__":
